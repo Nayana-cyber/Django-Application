@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Event Details - EventManager{% endblock %}
+
+{% block content %}
+{% if event %}
+<h1>{{ event.title }}</h1>
+<p>Date: {{ event.date }}</p>
+<p>Location: [Location Placeholder]</p>
+<p>Description: [Full Description Placeholder]</p>
+{% else %}
+<p>Event not found.</p>
+{% endif %}
+{% endblock %}

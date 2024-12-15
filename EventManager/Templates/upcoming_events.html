@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}Upcoming Events - EventManager{% endblock %}
+
+{% block content %}
+<h1>Upcoming Events</h1>
+<table>
+    <tr>
+        <th>Title</th>
+        <th>Date</th>
+        <th>Description</th>
+    </tr>
+    {% for event in events %}
+    <tr>
+        <td>{{ event.title }}</td>
+        <td>{{ event.date }}</td>
+        <td>{{ event.description }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
